@@ -16,7 +16,7 @@ fun isString(a: Any) = when (a) {
 }
 
 /*
- * Print, MutableList
+ * for example
  */
 val list = mutableList(1, 2, 3, 4, 5, 6)
 
@@ -30,4 +30,21 @@ for (x in list.indices) {
 
 for ((index, value) in list.withIndex()) {
     println("$index $value")
+}
+
+for (value in 1..10 step 2) {
+    println(value)
+}
+
+/**
+ * For - Map Example
+ */
+val map = mutableMapOf(
+    1 to "ABC", 
+    2 to "BBB", 
+    3 to "CCC"
+)
+
+for ((key, value) in map) {
+    println("key $key value $value")
 }
