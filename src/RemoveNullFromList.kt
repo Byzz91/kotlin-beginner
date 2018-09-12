@@ -1,6 +1,15 @@
 val list: List<String?> = mutableListOf("A", null, "C")
 list.filter { it != null }.forEach { println(it) }
 
+for (item in list) {
+    // prints A and Ignores null
+    item?.let { println(it) }
+}
+
+list.forEach {
+    it?.let { println(it) }
+}
+
 val cloneListWithoutNull: List<String> = list.filterNotNull()
 cloneListWithoutNull.forEach {
     println(it)
