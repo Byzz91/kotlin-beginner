@@ -15,5 +15,10 @@ fun nullException() {
         data.name = it.name
         data.age = it.age
         data.id = it.id
+    } ?: let {
+        println("Sample is null")
+        data.visibility = View.GONE
+        data.visibility = View.GONE
+        data.visibility = View.GONE
     }
 }
